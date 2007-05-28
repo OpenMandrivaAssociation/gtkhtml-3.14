@@ -5,7 +5,7 @@
 
 Summary:	GtkHTML is a HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.14.1
+Version: 3.14.2
 Release: %mkrel 1
 License:	LGPL
 Group:		Graphical desktop/GNOME
