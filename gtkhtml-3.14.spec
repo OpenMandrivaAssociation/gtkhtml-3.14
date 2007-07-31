@@ -20,7 +20,7 @@ BuildRequires:	libgnomeprintui-devel >= 2.7.0
 BuildRequires:	libsoup-devel >= 2.1.6
 BuildRequires:	gnome-icon-theme >= 1.2.0
 BuildRequires:	perl-XML-Parser
-BuildRequires:	intltool
+BuildRequires:	intltool gnome-common
 Requires:	%{lib_name} >= %{version}
 
 
