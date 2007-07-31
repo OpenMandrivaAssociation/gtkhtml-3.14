@@ -5,7 +5,7 @@
 
 Summary:	GtkHTML is a HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.15.5
+Version: 3.15.6
 Release: %mkrel 1
 License:	LGPL
 Group:		Graphical desktop/GNOME
@@ -20,6 +20,7 @@ BuildRequires:	libgnomeprintui-devel >= 2.7.0
 BuildRequires:	libsoup-devel >= 2.1.6
 BuildRequires:	gnome-icon-theme >= 1.2.0
 BuildRequires:	perl-XML-Parser
+BuildRequires:	intltool
 Requires:	%{lib_name} >= %{version}
 
 
@@ -66,9 +67,12 @@ This package contains the files necessary to develop applications with GtkHTML.
 
 %prep
 %setup -q -n %{package_name}-%{version}
+intltoolize --force
+aclocal
+autoconf
+automake
 
 %build
-
 %configure2_5x
 %make
 
