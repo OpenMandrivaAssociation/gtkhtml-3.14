@@ -1,12 +1,13 @@
 %define major	19
 %define package_name gtkhtml
 %define api_version 3.14
-%define lib_name %mklibname %{package_name}- %{api_version} %{major}
+%define libname %mklibname %{package_name}- %{api_version} %{major}
+%define libnamedev %mklibname -d %{package_name}- %{api_version}
 
 Summary:	GtkHTML is a HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
 Version: 3.15.6
-Release: %mkrel 1
+Release: %mkrel 2
 License:	LGPL
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
@@ -21,7 +22,7 @@ BuildRequires:	libsoup-devel >= 2.1.6
 BuildRequires:	gnome-icon-theme >= 1.2.0
 BuildRequires:	perl-XML-Parser
 BuildRequires:	intltool gnome-common
-Requires:	%{lib_name} >= %{version}
+Requires:	%{libname} >= %{version}
 
 
 %description 
@@ -37,11 +38,11 @@ an editor.  Thanks to the Bonobo editor component that comes with the
 library, it's extremely simple to add HTML editing to an existing
 application.
 
-%package -n %{lib_name}
+%package -n %{libname}
 Summary:        Libraries for GtkHTML
 Group:          System/Libraries
 
-%description -n %{lib_name}
+%description -n %{libname}
 GtkHTML is a HTML rendering/editing library.  GtkHTML is
 not designed to be the ultimate HTML browser/editor: instead, it is
 designed to be easily embedded into applications that require
@@ -49,15 +50,16 @@ lightweight HTML functionality.
 
 This package contains libraries used by GtkHTML.
 
-%package -n %{lib_name}-devel
+%package -n %{libnamedev}
 Summary:        Development libraries, header files and utilities for GtkHTML
 Group:          Development/GNOME and GTK+
 Requires:	%{name} = %{version}
-Requires:       %{lib_name} = %{version}
+Requires:       %{libname} = %{version}
 Provides:	lib%{package_name}-%{api_version}-devel = %{version}-%{release}
 Conflicts: %mklibname -d gtkhtml-3.8 15 
+Obsoletes: %mklibname -d %{package_name}- 3.14 19
 
-%description -n %{lib_name}-devel
+%description -n %{libnamedev}
 GtkHTML is a HTML rendering/editing library.  GtkHTML is
 not designed to be the ultimate HTML browser/editor: instead, it is
 designed to be easily embedded into applications that require
@@ -90,8 +92,8 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/bonobo/plugin/*.{la,a}  \
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig -n %{lib_name}
-%postun -p /sbin/ldconfig -n %{lib_name}
+%post -p /sbin/ldconfig -n %{libname}
+%postun -p /sbin/ldconfig -n %{libname}
 
 %files -f %{package_name}-%{api_version}.lang -n %{name}
 %defattr(-, root, root)
@@ -100,12 +102,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/bonobo/servers/*
 %{_datadir}/gtkhtml-%{api_version}
 
-%files -n %{lib_name}
+%files -n %{libname}
 %defattr(-, root, root)
 %doc AUTHORS COPYING 
 %{_libdir}/libgtkhtml-%{api_version}.so.%{major}*
 
-%files -n %{lib_name}-devel
+%files -n %{libnamedev}
 %defattr(-, root, root)
 %attr(644,root,root) %{_libdir}/*a
 %{_libdir}/*.so
