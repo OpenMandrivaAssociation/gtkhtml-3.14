@@ -13,7 +13,6 @@ Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
 
 URL:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	gail-devel
 BuildRequires:	libglade2.0-devel
