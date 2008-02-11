@@ -7,7 +7,7 @@
 Summary:	GtkHTML is a HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
 Version: 3.17.91
-Release: %mkrel 1
+Release: %mkrel 2
 License:	LGPL
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
@@ -55,6 +55,7 @@ Group:          Development/GNOME and GTK+
 Requires:	%{name} = %{version}
 Requires:       %{libname} = %{version}
 Provides:	lib%{package_name}-%{api_version}-devel = %{version}-%{release}
+Provides:	%{package_name}-%{api_version}-devel = %{version}-%{release}
 Conflicts: %mklibname -d gtkhtml-3.8 15 
 Obsoletes: %mklibname -d %{package_name}- 3.14 19
 
