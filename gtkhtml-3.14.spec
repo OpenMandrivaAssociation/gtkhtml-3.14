@@ -78,13 +78,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std
 
+# gw these produce rpmlint errors:
+rm -rf %buildroot%_datadir/locale/{bn_IN,si}
 %{find_lang} %{package_name}-%{api_version}
 
 # remove unpackaged files
 rm -f $RPM_BUILD_ROOT%{_libdir}/bonobo/plugin/*.{la,a}  \
  $RPM_BUILD_ROOT%{_libdir}/gtkhtml/*.{la,a}
-# gw these produce rpmlint errors:
-rm -rf %buildroot%_datadir/locale/{bn_IN,si}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
