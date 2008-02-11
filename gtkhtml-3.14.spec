@@ -54,7 +54,6 @@ Summary:        Development libraries, header files and utilities for GtkHTML
 Group:          Development/GNOME and GTK+
 Requires:	%{name} = %{version}
 Requires:       %{libname} = %{version}
-Provides:	lib%{package_name}-%{api_version}-devel = %{version}-%{release}
 Provides:	%{package_name}-%{api_version}-devel = %{version}-%{release}
 Conflicts: %mklibname -d gtkhtml-3.8 15 
 Obsoletes: %mklibname -d %{package_name}- 3.14 19
