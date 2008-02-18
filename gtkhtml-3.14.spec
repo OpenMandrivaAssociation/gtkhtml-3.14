@@ -4,7 +4,7 @@
 %define libname %mklibname %{package_name}- %{api_version} %{major}
 %define libnamedev %mklibname -d %{package_name}- %{api_version}
 
-Summary:	GtkHTML is a HTML rendering/editing library
+Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
 Version: 3.17.91
 Release: %mkrel 2
