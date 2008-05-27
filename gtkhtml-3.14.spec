@@ -6,7 +6,7 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.18.1
+Version: 3.18.2
 Release: %mkrel 1
 License:	LGPL
 Group:		Graphical desktop/GNOME
@@ -71,7 +71,7 @@ This package contains the files necessary to develop applications with GtkHTML.
 
 %build
 %configure2_5x
-%make
+%make LIBS=-lm
 
 %install
 rm -rf $RPM_BUILD_ROOT
