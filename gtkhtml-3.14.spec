@@ -19,8 +19,8 @@ BuildRequires:	gail-devel
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libsoup-devel >= 2.1.6
 BuildRequires:	gnome-icon-theme >= 1.2.0
-BuildRequires:	perl-XML-Parser
-#BuildRequires:	intltool gnome-common
+BuildRequires:	intltool
+#BuildRequires:	gnome-common
 Requires:	%{libname} >= %{version}
 
 
