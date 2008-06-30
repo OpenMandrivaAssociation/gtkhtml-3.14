@@ -6,9 +6,9 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.18.2
+Version: 3.18.3
 Release: %mkrel 1
-License:	LGPL
+License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
 
