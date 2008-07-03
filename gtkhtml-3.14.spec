@@ -6,7 +6,7 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.18.3
+Version: 3.23.4
 Release: %mkrel 1
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
@@ -99,19 +99,19 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{package_name}-%{api_version}.lang -n %{name}
 %defattr(-, root, root)
 %doc AUTHORS NEWS README TODO
-%{_libdir}/gtkhtml
-%{_libdir}/bonobo/servers/*
 %{_datadir}/gtkhtml-%{api_version}
 
 %files -n %{libname}
 %defattr(-, root, root)
 %doc AUTHORS COPYING 
 %{_libdir}/libgtkhtml-%{api_version}.so.%{major}*
+%{_libdir}/libgtkhtml-editor.so.0*
 
 %files -n %{libnamedev}
 %defattr(-, root, root)
 %doc ChangeLog 
 %attr(644,root,root) %{_libdir}/*a
+%_bindir/gtkhtml-editor-test
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
