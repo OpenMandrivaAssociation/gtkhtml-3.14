@@ -18,6 +18,8 @@ BuildRequires:	libgnomeui2-devel
 BuildRequires:	gail-devel
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libsoup-devel >= 2.1.6
+BuildRequires:	iso-codes
+BuildRequires:	enchant-devel
 BuildRequires:	gnome-icon-theme >= 1.2.0
 BuildRequires:	intltool
 #BuildRequires:	gnome-common
