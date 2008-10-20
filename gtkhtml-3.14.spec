@@ -6,7 +6,7 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.24.0
+Version: 3.24.1
 Release: %mkrel 1
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
