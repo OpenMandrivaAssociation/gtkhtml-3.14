@@ -6,12 +6,11 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.26.0
+Version: 3.26.1.1
 Release: %mkrel 1
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
-Patch: gtkhtml-3.25.3-format-strings.patch
 
 URL:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
@@ -71,7 +70,6 @@ This package contains the files necessary to develop applications with GtkHTML.
 
 %prep
 %setup -q -n %{package_name}-%{version}
-%patch -p1
 
 %build
 %configure2_5x
