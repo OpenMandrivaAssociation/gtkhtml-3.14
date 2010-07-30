@@ -6,7 +6,7 @@
 
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
-Version: 3.30.2
+Version: 3.31.5
 Release: %mkrel 1
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
@@ -15,7 +15,8 @@ Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{versio
 URL:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	gail-devel
-BuildRequires:	libglade2.0-devel
+BuildRequires:	gtk+2-devel
+#BuildRequires:	glade3-devel
 BuildRequires:	libsoup-devel >= 2.1.6
 BuildRequires:	iso-codes
 BuildRequires:	enchant-devel
@@ -106,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-, root, root)
 %doc AUTHORS COPYING 
 %{_libdir}/libgtkhtml-%{api_version}.so.%{major}*
-%{_libdir}/libgtkhtml-editor.so.0*
+%{_libdir}/libgtkhtml-editor-%{api_version}.so.0*
 
 %files -n %{libnamedev}
 %defattr(-, root, root)
