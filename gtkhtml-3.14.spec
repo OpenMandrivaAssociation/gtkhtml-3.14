@@ -22,7 +22,7 @@ BuildRequires:	iso-codes
 BuildRequires:	enchant-devel
 BuildRequires:	gnome-icon-theme >= 1.2.0
 BuildRequires:	intltool
-#BuildRequires:	gnome-common
+BuildRequires:	libGConf2-devel GConf2
 Requires:	%{libname} >= %{version}
 
 
