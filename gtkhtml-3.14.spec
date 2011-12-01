@@ -76,7 +76,7 @@ This package contains the files necessary to develop applications with GtkHTML.
 %make LIBS=-lm
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
 
@@ -85,11 +85,11 @@ rm -rf %buildroot%_datadir/locale/{bn_IN,si}
 %{find_lang} %{package_name}-%{api_version}
 
 # remove unpackaged files
-rm -f $RPM_BUILD_ROOT%{_libdir}/bonobo/plugin/*.{la,a}  \
- $RPM_BUILD_ROOT%{_libdir}/gtkhtml/*.{la,a}
+rm -f %{buildroot}%{_libdir}/bonobo/plugin/*.{la,a}  \
+ %{buildroot}%{_libdir}/gtkhtml/*.{la,a}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post -p /sbin/ldconfig -n %{libname}
