@@ -7,7 +7,7 @@
 Summary:	HTML rendering/editing library
 Name:		%{package_name}-%{api_version}
 Version: 3.32.2
-Release: %mkrel 3
+Release: %mkrel 4
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
@@ -86,17 +86,10 @@ rm -rf %buildroot%_datadir/locale/{bn_IN,si}
 
 # remove unpackaged files
 rm -f %{buildroot}%{_libdir}/bonobo/plugin/*.{la,a}  \
- %{buildroot}%{_libdir}/gtkhtml/*.{la,a}
+ %{buildroot}%{_libdir}/gtkhtml/*.{la,a} %{_libdir}/*.la
 
 %clean
 rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post -p /sbin/ldconfig -n %{libname}
-%endif
-%if %mdkversion < 200900
-%postun -p /sbin/ldconfig -n %{libname}
-%endif
 
 %files -f %{package_name}-%{api_version}.lang -n %{name}
 %defattr(-, root, root)
