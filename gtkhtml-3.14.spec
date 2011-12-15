@@ -11,6 +11,7 @@ Release: %mkrel 4
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{package_name}-%{version}.tar.bz2
+Patch0: gtkhtml-3.32.2-fix-linking.patch
 
 URL:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
@@ -70,6 +71,8 @@ This package contains the files necessary to develop applications with GtkHTML.
 
 %prep
 %setup -q -n %{package_name}-%{version}
+%apply_patches
+autoreconf -fi
 
 %build
 %configure2_5x --enable-deprecated-warning-flags=no
@@ -86,7 +89,7 @@ rm -rf %buildroot%_datadir/locale/{bn_IN,si}
 
 # remove unpackaged files
 rm -f %{buildroot}%{_libdir}/bonobo/plugin/*.{la,a}  \
- %{buildroot}%{_libdir}/gtkhtml/*.{la,a} %{_libdir}/*.la
+ %{buildroot}%{_libdir}/gtkhtml/*.{la,a} %buildroot%{_libdir}/*.la
 
 %clean
 rm -rf %{buildroot}
