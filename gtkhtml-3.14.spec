@@ -108,7 +108,6 @@ rm -rf %{buildroot}
 %files -n %{libnamedev}
 %defattr(-, root, root)
 %doc ChangeLog 
-%attr(644,root,root) %{_libdir}/*a
 %_bindir/gtkhtml-editor-test
 %{_libdir}/*.so
 %{_includedir}/*
