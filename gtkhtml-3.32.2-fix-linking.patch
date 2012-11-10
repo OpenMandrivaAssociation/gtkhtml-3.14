@@ -1,0 +1,11 @@
+--- gtkhtml-3.32.2/components/editor/Makefile.am.linking	2011-12-15 13:20:02.949838759 +0100
++++ gtkhtml-3.32.2/components/editor/Makefile.am	2011-12-15 13:20:28.828530599 +0100
+@@ -75,7 +75,7 @@ lib_LTLIBRARIES = libgtkhtml-editor-3.14
+ libgtkhtml_editor_3_14_la_SOURCES = $(csources) 
+ libgtkhtml_editor_3_14_la_LIBADD = \
+ 	@GTKHTML_LIBS@				\
+-	$(top_builddir)/gtkhtml/libgtkhtml-@EDITOR_API_VERSION@.la
++	$(top_builddir)/gtkhtml/libgtkhtml-@EDITOR_API_VERSION@.la -lgthread-2.0
+ libgtkhtml_editor_3_14_la_LDFLAGS = -no-undefined
+ endif
+ 
