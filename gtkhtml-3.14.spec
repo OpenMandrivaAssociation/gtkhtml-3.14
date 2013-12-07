@@ -11,7 +11,7 @@
 Summary:	HTML rendering/editing library
 Name:		%{oname}%{api}
 Version:	3.32.2
-Release:	6
+Release:	7
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
