@@ -18,7 +18,7 @@ Url:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{url_ver}/%{oname}-%{version}.tar.bz2
 Patch0:		gtkhtml-3.32.2-fix-linking.patch
 
-BuildRequires:	gnome-icon-theme >= 1.2.0
+BuildRequires:	pkgconfig(gnome-icon-theme)
 BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	pkgconfig(enchant)
@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(gail)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(ORBit-2.0)
 Requires:	%{libname} >= %{version}
 ### MD TODO rename src pkg directory
 Obsoletes:	gtkhtml-3.14 < 3.32.2-6
