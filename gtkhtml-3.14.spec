@@ -76,7 +76,7 @@ This package contains the files necessary to develop applications with GtkHTML.
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 autoreconf -fi
 
 %build
