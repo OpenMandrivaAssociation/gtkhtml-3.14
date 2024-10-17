@@ -14,7 +14,7 @@ Version:	3.32.2
 Release:	15
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
-Url:		http://ftp.gnome.org/pub/gnome/sources/gtkhtml/
+Url:		https://ftp.gnome.org/pub/gnome/sources/gtkhtml/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkhtml/%{url_ver}/%{oname}-%{version}.tar.bz2
 Patch0:		gtkhtml-3.32.2-fix-linking.patch
 
